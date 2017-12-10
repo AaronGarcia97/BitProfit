@@ -8,6 +8,7 @@
     android:elevation="2dp"
     android:layout_height="match_parent"
     tools:context="lyaaronresumecv.bit.bitprofit.MainActivity">
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -227,7 +228,7 @@
                         android:layout_weight="1"
                         android:layout_width="80dp"
                         android:text="BTC"
-                        android:textColor="#777777"c
+                        android:textColor="#777777"
                         android:layout_height="wrap_content" />
 
                     <EditText
