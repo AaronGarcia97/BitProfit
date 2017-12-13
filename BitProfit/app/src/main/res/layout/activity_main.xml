@@ -1,268 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#eeeeee"
-    android:elevation="2dp"
     android:layout_height="match_parent"
-    tools:context="lyaaronresumecv.bit.bitprofit.MainActivity">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:fitsSystemWindows="true"
+    android:padding="0dp">
 
-    <!-- A CardView that contains a TextView -->
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_margin="8dp"
-        android:layout_gravity="center"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/windowBackground"
+            android:titleTextColor="@color/secondaryColor"
+            android:foregroundTintMode="@color/secondaryColor"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <!--android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="4dp">
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/secondaryColor"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/ic_dialog_email" /-->
 
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:textColor="#333333"
-                android:id="@+id/name_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:fontFamily="sans-serif-medium"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp"
-                android:text="Bitcoin Price"
-                android:textSize="21sp" />
-
-            <TextView
-                android:textColor="#777777"
-                android:id="@+id/date_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name_tv"
-                android:fontFamily="sans-serif-medium"
-                android:text="dia mes año, hora:00 de actualizacion"
-                android:textSize="15sp" />
-
-            <ImageView
-                android:id="@+id/b_img"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/date_tv"
-                android:layout_marginBottom="16dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/bcoin" />
-
-            <LinearLayout
-                android:id="@+id/content_ll1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_alignBottom="@+id/b_img"
-                android:layout_below="@+id/date_tv"
-                android:layout_toLeftOf="@+id/b_img"
-                android:orientation="vertical"
-                android:layout_toStartOf="@+id/b_img">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="45sp"
-                    android:textColor="#777777"
-                    android:text="$16,700.00"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:paddingRight="16dp"
-                        android:textColor="#777777"
-                        android:text="Unit price per USD"/>
-
-                    <Switch
-                        android:layout_width="wrap_content"
-                        android:textOn="USD"
-                        android:textOff="MX"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view2"
-        android:layout_gravity="center"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="24dp"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="4dp">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <ImageView
-                android:paddingTop="4dp"
-                android:id="@+id/bcon_icon_iv"
-                android:layout_alignParentTop="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="8dp"
-                android:layout_alignParentLeft="true"
-                android:src="@drawable/ic_currency_btc_grey600_24dp"/>
-
-            <TextView
-                android:textColor="#333333"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/bcon_icon_iv"
-                android:text="Bitcoin conversion"
-                android:fontFamily="sans-serif-medium"
-                android:textSize="24sp" />
-
-            <LinearLayout
-                android:paddingTop="16dp"
-                android:id="@+id/convertion_ll"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="24dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:text="Bitcoin to USD/MX"
-                            android:paddingRight="16dp"
-                            android:layout_height="wrap_content" />
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:text="USD/MX to Bitcoin"
-                            android:layout_height="wrap_content" />
-
-                    </RadioGroup>
-                </LinearLayout>
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="$16,700.00 USD"
-                    android:textSize="45sp" />
-
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:enabled="true"
-                    android:lineSpacingExtra="12sp"
-                    android:showText="true"
-                    android:splitTrack="true"
-                    android:switchPadding="8dp"
-                    android:text="Unit "
-                    android:textAlignment="center"
-                    android:textOff="MX"
-                    android:textOn="USD"
-                    android:textSize="14sp"
-                    tools:checked="true"
-                    tools:text="Unit " />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="5"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_weight="1"
-                        android:textColor="#777777"
-                        android:layout_width="0dp"
-                        android:text="E. Rate "
-                        android:layout_height="wrap_content" />
-
-                    <EditText
-                        android:layout_weight="4"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:hint="user-input"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="5"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="80dp"
-                        android:text="BTC"
-                        android:textColor="#777777"c
-                        android:layout_height="wrap_content" />
-
-                    <EditText
-                        android:layout_weight="4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="user-input"/>
-                </LinearLayout>
-
-
-                <Button
-                    android:layout_marginTop="24dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Convertion"
-                    android:textColor="#ffffff"
-                    android:paddingRight="16dp"
-                    android:paddingLeft="16dp"
-                    android:background="#dd0000"
-                    android:layout_gravity="center"/>
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-    </android.support.v7.widget.CardView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:text="Powered by CoinDesk"
-            android:paddingBottom="24dp"
-            android:paddingTop="8dp"
-            android:textAlignment="center"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-</ScrollView>
+</android.support.design.widget.CoordinatorLayout>
